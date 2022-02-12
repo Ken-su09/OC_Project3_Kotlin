@@ -1,6 +1,6 @@
 package com.suonk.oc_project3_kotlin
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
