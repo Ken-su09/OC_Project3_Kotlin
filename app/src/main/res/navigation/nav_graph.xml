@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/neighbourListFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.suonk.oc_project3_kotlin.ui.fragments.main_pages.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.suonk.oc_project3_kotlin.ui.fragments.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/neighbourListFragment"
+        android:name="com.suonk.oc_project3_kotlin.ui.fragments.main_pages.NeighbourListFragment"
+        android:label="fragment_neighbour_list"
+        tools:layout="@layout/fragment_neighbour_list">
+        <action
+            android:id="@+id/action_neighbourListFragment_to_neighbourDetailsFragment"
+            app:destination="@id/neighbourDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_neighbourListFragment_to_addNeighbourFragment"
+            app:destination="@id/addNeighbourFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNeighbourFragment"
+        android:name="com.suonk.oc_project3_kotlin.ui.fragments.main_pages.AddNeighbourFragment"
+        android:label="fragment_add_neighbour"
+        tools:layout="@layout/fragment_add_neighbour" />
+    <fragment
+        android:id="@+id/neighbourDetailsFragment"
+        android:name="com.suonk.oc_project3_kotlin.ui.fragments.main_pages.NeighbourDetailsFragment"
+        android:label="fragment_neighbour_details"
+        tools:layout="@layout/fragment_neighbour_details" />
+</navigation>
